@@ -1,0 +1,43 @@
+<form [formGroup]="log.formLogGroup">
+    Enter Name: <input formControlName="nameControl" [(ngModel)]="log.name" type="text"><br>
+    <div class="error" *ngIf="log.formLogGroup.dirty" [hidden]="!(hasError('required','nameControl'))">
+        Name is required
+    </div>
+
+    Enter Email: <input formControlName="emailControl" [(ngModel)]="log.email" type="text"><br>
+    <div class="error" *ngIf="log.formLogGroup.dirty" [hidden]="!(hasError('required','emailControl'))">
+        Email is required
+    </div>
+    <div class="error" *ngIf="log.formLogGroup.dirty" [hidden]="!(hasError('email','emailControl'))">
+        Email is Not Valid
+    </div>
+
+    Select Type of Visit :
+    <select [(ngModel)]="log.typeOfVisit" formControlName="typeOfVisitControl">
+        <option *ngFor="let type of typeOfVisit" value="{{type}}">{{type}}</option>
+    </select>
+    <br>
+    <div class="error" *ngIf="log.formLogGroup.dirty" [hidden]="!(hasError('required','typeOfVisitControl'))">
+        Type Of Visit is required
+    </div>
+
+    Person To Visit: <input formControlName="personToVisitControl" [(ngModel)]="log.personToVisit" type="text"><br>
+    <div class="error" *ngIf="log.formLogGroup.dirty" [hidden]="!(hasError('required','personToVisitControl'))">
+        Persone To Visit isrequired
+    </div>
+
+    Date Of Entry: <input [ngModelOptions]="{standalone: true}" [disabled]="true" [ngModel]="log.dateOfEntry"
+        type="date"><br>
+
+
+    Time Of Entry: <input formControlName="timeOfEntryControl" [(ngModel)]="log.timeOfEntry" type="time"><br>
+    <div class="error" *ngIf="log.formLogGroup.dirty" [hidden]="!(hasError('required','timeOfEntryControl'))">
+        Time Of Entry is required
+    </div>
+
+    Time Of Exit: <input formControlName="timeOfExitControl" [(ngModel)]="log.timeOfExit" type="time"><br>
+    <div class="error" *ngIf="log.formLogGroup.dirty" [hidden]="!(hasError('required','timeOfExitControl'))">
+        Time Of Exit is required
+    </div>
+    <input [disabled]="!(log.formLogGroup.valid)" type="button" (click)="Save()" value="Save"><br>
+</form>

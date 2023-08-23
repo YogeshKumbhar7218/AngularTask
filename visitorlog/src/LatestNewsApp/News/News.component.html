@@ -1,0 +1,33 @@
+
+<div *ngFor="let article of articles" class="box">
+    <div>
+        <h3>Author: </h3>{{article.author}}
+    </div>
+
+    <div>
+        <h3>title: </h3>{{article.title}}
+    </div>
+
+    <div>
+        <h3>Description: </h3>{{article.description}}
+    </div>
+
+    <div>
+        <h3>url: </h3><a href="{{article.url}}" target="_blank">{{article.url}}</a>
+    </div>
+
+    <div>
+        <h3>urlToImage:</h3>
+        <img src="{{article.urlToImage}}" alt="Image">
+    </div>
+
+    <div>
+        <h3>Publishe At: </h3>{{article.publishedAt | date}}
+    </div>
+
+    <div>
+        <h3>Content: </h3>
+        <p>{{article.content}}</p>
+    </div>
+
+</div>

@@ -1,17 +1,22 @@
 import { NgModule } from '@angular/core';
 import { MasterPageComponent } from './masterPage/MasterPage.component';
-import { HomeComponent } from './home/Home.component';
 import { HomeAppRoutingModule } from './HomeApp-routing.module';
 import { BrowserModule } from '@angular/platform-browser';
+import { AddLogComponent } from './addLog/AddLog.component';
+import { CheckLogComponent } from './checkLog/CheckLog.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     MasterPageComponent,
-    HomeComponent
+    AddLogComponent,
+    CheckLogComponent
   ],
   imports: [
     BrowserModule,
-    HomeAppRoutingModule
+    HomeAppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [MasterPageComponent]

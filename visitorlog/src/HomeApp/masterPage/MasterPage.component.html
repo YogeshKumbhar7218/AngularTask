@@ -1,8 +1,12 @@
-Master page
+<div class="container">
+    <div class="leftContainer">
+        <a routerLink="Add"> Add log</a> <br>
+        <a routerLink="Check"> Check log</a> <br>
+        <a routerLink="LatestNews"> Latest News</a> <br>
+    </div>
+    <div class="rightContainer">
+        <router-outlet></router-outlet>
+    </div>
+</div>
 
-<hr>
-<a routerLink="Home"> Home</a> <br>
-<a routerLink="VisitorLog"> Visitor Log</a> <br>
-<a routerLink="LatestNews"> Latest News</a> <br>
 
-<hr>

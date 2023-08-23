@@ -1,19 +1,17 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomeComponent } from './home/Home.component';
+import { AddLogComponent } from './addLog/AddLog.component';
+import { CheckLogComponent } from './checkLog/CheckLog.component';
 
 const routes: Routes = [
   {
-    path: '', component:HomeComponent
+    path: 'Add', component:AddLogComponent
   },
   {
-    path: 'Home', component:HomeComponent
+    path: 'Check', component:CheckLogComponent
   },
   {
-    path: 'VisitorLog', component:HomeComponent
-  },
-  {
-    path: 'LatestNews', component:HomeComponent
+    path: 'LatestNews', loadChildren: () => import('../LatestNewsApp/LatestNewsApp.module').then(m => m.LatestNewsAppModule)
   }
 ];
 

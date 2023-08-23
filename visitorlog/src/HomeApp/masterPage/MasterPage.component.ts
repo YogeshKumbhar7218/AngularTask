@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./MasterPage.component.css']
 })
 export class MasterPageComponent {
-  title = 'Master Page';
+
 }

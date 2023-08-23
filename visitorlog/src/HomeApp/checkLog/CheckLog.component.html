@@ -1,0 +1,20 @@
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Type of Visit</th>
+        <th>Person To Visit</th>
+        <th>Date Of Entry</th>
+        <th>Time Of Entry</th>
+        <th>Time Of Exit</th>
+    </tr>
+    <tr *ngFor="let log of logs">
+        <td>{{log.name}}</td>
+        <td>{{log.email}}</td>
+        <td>{{log.typeOfVisit}}</td>
+        <td>{{log.personToVisit}}</td>
+        <td>{{log.dateOfEntry}}</td>
+        <td>{{log.timeOfEntry}}</td>
+        <td>{{log.timeOfExit}}</td>
+    </tr>
+</table>
