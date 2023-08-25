@@ -11,7 +11,7 @@ export class NewsComponent {
     this.getData();
   }
   getData() {
-    this.http.get("https://newsapi.org/v2/everything?q=tesla&from=2023-07-23&sortBy=publishedAt&apiKey=e3e193edc16b4458afa2f80672d03d22")
+    this.http.get("https://newsapi.org/v2/everything?q=tesla&from=2023-07-25&sortBy=publishedAt&apiKey=e3e193edc16b4458afa2f80672d03d22")
       .subscribe(res => this.SuccessGet(res), res => this.Error(res));
   }
   SuccessGet(res:any) {

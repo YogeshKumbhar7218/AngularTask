@@ -28,7 +28,8 @@ export class AddLogComponent {
   
 
   Save() {
-        //save into local storage
+    //save into local storage
+    //create DTO
     let dto = {
       name: this.log.name,
       email: this.log.email,
@@ -38,9 +39,11 @@ export class AddLogComponent {
       timeOfEntry: this.log.timeOfEntry,
       timeOfExit: this.log.timeOfExit,
     };
+    //number of entries ++
     this.numberOfEntries = this.numberOfEntries + 1;
     localStorage.setItem('numberOfEntries', String(this.numberOfEntries));
 
+    //insert entry in local storage
     localStorage.setItem(String(this.numberOfEntries), JSON.stringify(dto));
     
     //Get new entry

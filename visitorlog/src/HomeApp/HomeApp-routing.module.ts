@@ -5,6 +5,9 @@ import { CheckLogComponent } from './checkLog/CheckLog.component';
 
 const routes: Routes = [
   {
+    path: '', component:AddLogComponent
+  },
+  {
     path: 'Add', component:AddLogComponent
   },
   {

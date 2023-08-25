@@ -1,33 +1,25 @@
+<!-- <div *ngFor="let article of articles" class="card">
+    <h2>{{article.title}}</h2>
+    <h5>{{article.description}}, {{article.publishedAt | date}}</h5>
+    <div class="fakeimg" style="height:200px;"><img src="{{article.urlToImage}}" alt="Image"></div>
+    <p>Some text..</p>
+    <p>{{article.content}}</p>
+    <p><i>{{article.author}}</i></p>
+</div> -->
 
-<div *ngFor="let article of articles" class="box">
-    <div>
-        <h3>Author: </h3>{{article.author}}
+<div *ngFor="let article of articles" class="row">
+    <div class="column">
+        <div class="card">
+            <div class="head">
+                <h2>{{article.title}}</h2>
+                <h5>{{article.description}}</h5>
+            <img src="{{article.urlToImage}}" alt="Image">
+
+            </div>
+
+            <p>{{article.content}}</p>
+            <p><i>{{article.author}}, {{article.publishedAt | date}}</i><a href="{{article.url}}" target="_blank"> Vist Site</a></p>
+            
+        </div>
     </div>
-
-    <div>
-        <h3>title: </h3>{{article.title}}
-    </div>
-
-    <div>
-        <h3>Description: </h3>{{article.description}}
-    </div>
-
-    <div>
-        <h3>url: </h3><a href="{{article.url}}" target="_blank">{{article.url}}</a>
-    </div>
-
-    <div>
-        <h3>urlToImage:</h3>
-        <img src="{{article.urlToImage}}" alt="Image">
-    </div>
-
-    <div>
-        <h3>Publishe At: </h3>{{article.publishedAt | date}}
-    </div>
-
-    <div>
-        <h3>Content: </h3>
-        <p>{{article.content}}</p>
-    </div>
-
 </div>

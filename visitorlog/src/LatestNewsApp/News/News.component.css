@@ -1,8 +1,46 @@
-.box{
-    padding: 20px;
-    margin: 20px;
-    border: 2px solid red;
+
+
+
+
+/* Style the counter cards */
+.card {
+    width: 60%;
+    margin: auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    /* text-align: center; */
+    background-color: #f1f1f1; 
+    margin-bottom: 1rem;
+} 
+.card .head{
+    text-align: center;
+}
+.card h5{
+    width: 70%;
+    margin:auto;
+    text-align: justify;
+    margin-bottom: 1rem
+}
+.card h2{
+    width: 60%;
+    margin: auto;
+    margin-bottom: 1rem;
 }
 img{
-    width: 100%;
+   width: 40vw;
+   margin: 1rem;
+}
+
+p{
+    width: 70%;
+    margin: auto;
+    text-align: justify;
+    margin-bottom: 1rem
+
+}
+.card a {
+    width: 60%;
+    margin: auto;
+    text-align: justify;
+    margin-bottom: 1rem
 }
